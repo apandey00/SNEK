@@ -10,7 +10,6 @@
 		}
 
 		#container {
-			/*padding-left: 200px;*/
 			padding-right: 190px;
 		}
 		
@@ -40,11 +39,6 @@
 			overflow: hidden;
 		}
 
-		#container .column {
-			padding-bottom: 1001em;
-			margin-bottom: -1000em;
-		}
-
 		/* Fix for the footer */
 		* html body {
 			overflow: hidden;
@@ -54,9 +48,6 @@
 			float: left;
 			position: relative;
 			width: 100%;
-			padding-bottom: 10010px;
-			margin-bottom: -10000px;
-			background: #fff;
 		}
 
 		/* Aesthetics */
@@ -70,18 +61,7 @@
 		p {
 			color: #555;
 		}
-
-		nav ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-		}
-		
-		nav ul a {
-			color: darkgreen;
-			text-decoration: none;
-		}
-
+	
 		#header, #footer {
 			font-size: large;
 			padding: 0.3em;
@@ -100,25 +80,24 @@
 			padding-top: 1em;
 		}
 
-		.grid-container {
+		.box-container {
   			display: grid;
   			grid-template-columns: auto auto auto;
 		  	background-color: #2196F3;
 		  	padding: 10px;
 		}
-		.grid-item {
+		.box-item {
 		  	background-color: rgba(255, 255, 255, 0.8);
 		  	border: 1px solid rgba(0, 0, 0, 0.8);
 		  	padding: 20px;
 		  	font-size: 15px;
 		}
-		
 	</style>
 </head>
 
 <body>
 
-	<header id="header"><p>Header...</p></header>
+	<header id="header"><p></p></header>
 
 	<div id="container">
 
@@ -130,8 +109,8 @@
 				    desperate for a home and you could be the lucky one to take them home. We have just taken in some new
 					snakes from the Galapagos islands so be sure to check them out before they're gone!</h3>
 
-				<div class="grid-container">
-  					<div class="grid-item">
+				<div class="box-container">
+  					<div class="box-item">
   						<ul>
   							<li>Name: Jimmy</li>
   							<li>Age: 25</li>
@@ -143,7 +122,7 @@
   							loves to snuggle up to any future owners.</li>
   						</ul>
   					</div>
-  					<div class="grid-item">
+  					<div class="box-item">
   						<ul>
   							<li>Name: Jimmy</li>
   							<li>Age: 25</li>
@@ -155,7 +134,7 @@
   							loves to snuggle up to any future owners.</li>
   						</ul>
   					</div>
-					<div class="grid-item">
+					<div class="box-item">
 						<ul>
   							<li>Name: Jimmy</li>
   							<li>Age: 25</li>
@@ -167,7 +146,7 @@
   							loves to snuggle up to any future owners.</li>
   						</ul>
 					</div>  
-					<div class="grid-item">
+					<div class="box-item">
 						<ul>
   							<li>Name: Jimmy</li>
   							<li>Age: 25</li>
@@ -179,7 +158,7 @@
   							loves to snuggle up to any future owners.</li>
   						</ul>
 					</div>
-					<div class="grid-item">
+					<div class="box-item">
 						<ul>
   							<li>Name: Jimmy</li>
   							<li>Age: 25</li>
@@ -191,7 +170,7 @@
   							loves to snuggle up to any future owners.</li>
   						</ul>
 					</div>
-					<div class="grid-item">
+					<div class="box-item">
 						<ul>
   							<li>Name: Jimmy</li>
   							<li>Age: 25</li>
@@ -203,7 +182,7 @@
   							loves to snuggle up to any future owners.</li>
   						</ul>
 					</div>  
-					<div class="grid-item">
+					<div class="box-item">
 						<ul>
   							<li>Name: Jimmy</li>
   							<li>Age: 25</li>
@@ -215,7 +194,7 @@
   							loves to snuggle up to any future owners.</li>
   						</ul>
 					</div>
-					<div class="grid-item">
+					<div class="box-item">
 						<ul>
   							<li>Name: Jimmy</li>
   							<li>Age: 25</li>
@@ -227,7 +206,7 @@
   							loves to snuggle up to any future owners.</li>
   						</ul>
 					</div>
-					<div class="grid-item">
+					<div class="box-item">
 						<ul>
   							<li>Name: Jimmy</li>
   							<li>Age: 25</li>
@@ -245,13 +224,22 @@
 		</main>
 
 		<div id="right" class="column">
-			<h3>Right heading</h3>
+			<h3>Some pics of our scaly friends</h3>
+			<div>
+				<img style="border:5px solid #0C68E9" src="boa-constrictor.jpg" alt="Boa" width="120px">
+				<br><br>
+				<img style="border:5px solid #0C68E9" src="small-snake.jpg" alt="Small" width="120px">
+				<br><br>
+				<img style="border:5px solid #0C68E9" src="blue-snake.jpg" alt="Blue" width="120px">
+				<br><br>
+				<img style="border:5px solid #0C68E9" src="serpent.jpg" alt="Serpent" width="120px">
+			</div>
 		</div>
 
 	</div>
 
 	<div id="footer-wrapper">
-		<footer id="footer"><p>Footer...</p></footer>
+		<footer id="footer"><p></p></footer>
 	</div>
 
 </body>
