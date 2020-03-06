@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Adoption Page</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="header.css">
+
 	<style type="text/css">
 		.fa {
   			padding: 20px;
@@ -46,7 +49,6 @@
 			padding: 10px 20px;
 			width: 100%;
 		}
-	
 		
 		#right {
 			width: 130px;
@@ -86,7 +88,7 @@
 			color: #555;
 		}
 	
-		#header, #footer {
+		#footer {
 			font-size: large;
 			padding: 0.3em;
 			background: #BCCE98;
@@ -116,47 +118,21 @@
 		  	padding: 20px;
 		  	font-size: 15px;
 		}
-		.topnav {
-  			overflow: hidden;
-  			background-color: #333;
-		}
-
-		.topnav a {
-  			float: left;
-  			color: #f2f2f2;
-  			text-align: center;
-  			padding: 14px 16px;
-  			text-decoration: none;
-  			font-size: 17px;
-		}
-
-		.topnav a:hover {
-		  background-color: #ddd;
-		  color: black;
-		}
-
-		.topnav a.active {
-  			background-color: #4CAF50;
-  			color: white;
-		}
 	</style>
 </head>
 
 <body>
-
-	<header id="header">
-		<div class="topnav">
-  			<a class="active" href="#home">Home</a>
-  			<a href="#news">Why Adopt?</a>
-  			<a href="#contact">Happy Stories</a>
-  			<a href="#about">Shop</a>
-  			<a href="#about">Donate!</a>
-  			<a href="#about">Find Your Snake</a>
-  			<a href="#about">Meet The Team</a>
-		</div>
-		
-	</header>
-
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"> 
+	</script>
+	<script>
+		$(document).ready (function(){
+			$("#header").load("header.html");
+		});     
+    </script>
+	<header id="header"> </header>
 
 	<div id="container">
 
