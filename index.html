@@ -2,9 +2,22 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Forgotten Friends</title>
+    <title>Why Adopt?</title>
     <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <style>
+      body {
+      margin: 0;
+      padding: 0;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
 
+      .title {
+        text-decoration: underline;
+        font-size: 1.25rem;
+        color: darkgreen;
+      }
+    </style>
   </head>
   <body>
     <script
@@ -16,10 +29,88 @@
     <script>
       $(document).ready (function(){
         $("#header").load("header.html");
-      });    
+      });   
+
+      $(window).on('scroll', function() {
+        console.log($(window).scrollTop())
+      }); 
   </script>
   <header id="header">
   </header>
 
+  <div class="modal active">
+    <div class="modal-content">
+      <div class="modal-tag">
+        Hi!
+      </div>
+    <div class="title"> My name is Comet and I'm a Sterling Pied Ball Snake.</div>
+    <p>
+    We really like Comet and he's found a home with us. Help Comet's friends find a loving home too.
+    </p>
+    <a href="/SNEK/adoptionPage.html">Save a Snake</a>
+    </div>
+    <div class="modal-pic">
+      <button onclick="closeModal()" class="close-button">&times;</button>
+      <img src="snake1.jpg" alt="snake1">
+    </div>  
+  </div>
+  <div class="active" id="overlay"></div>
+
+  <script>
+   function closeModal() {
+     $("#overlay").remove()
+     $( ".modal" ).fadeOut( 500 );
+     $(".box1").delay(600).fadeTo("slow", "1.0");
+     $(".box2").delay(2100).fadeTo("slow", "1.0");
+   }
+  </script>
+  <script>
+
+  </script>
+  <div class="intro">
+    <div class="box1">
+      Meet <em>Dave</em>. <br /> Our Greenback Scaled Python.
+    </div>
+    <div class="box2">
+      Dave's a Little Misunderstood  :(
+    </div>
+  </div>
+
+  <section>
+    <div class="snake-info">
+      <div style="
+      font-size: 1.25rem;
+      padding-left: 2px;
+      color: green;
+      font-size: xx-large;
+      font-weight: 400;
+      ">
+      Let's <strong><em>Shed</em></strong> Some Light on our Scaly Friends.
+      </div>
+      <hr />
+      <div class="content-container">
+
+      
+      <div class="content-box">
+        <div class="title">
+          Not All Snakes Bite! <br />Some Common Misconceptions about our Reptilian Pals:
+        </div>
+      </div>
+
+      <div class="content-box">
+        <div class="title">
+          Want a Snake?<br /> Take a look at all the little friends we have available:
+        </div>
+      </div>
+
+      <div class="content-box">
+        <div class="title">
+          Don't want to take up a Snake in your House?<br /> Here's how you can still contribute to the cause:
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section>
 </body>
 </html>
