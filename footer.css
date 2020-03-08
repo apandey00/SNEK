@@ -1,0 +1,36 @@
+#footer {
+	font-size: large;
+	padding: 0.3em;
+	background: #BCCE98;
+	clear: both;
+}
+
+* html #footer-wrapper {
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+.fa {
+	padding: 20px;
+	font-size: 30px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+}
+
+.fa-facebook {
+	background: #3B5998;
+	color: white;
+}
+
+.fa-instagram {
+	background: #125688;
+	color: white;
+}
+
+.fa-twitter {
+	background: #55ACEE;
+	color: white;
+}

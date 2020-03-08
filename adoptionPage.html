@@ -6,6 +6,7 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="header.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
 
 	<style type="text/css">
 		.fa {
@@ -271,7 +272,7 @@
 
 	</div>
 
-	<div id="footer-wrapper">
+	<!-- <div id="footer-wrapper">
 		<footer id="footer">
 			<p> Disclaimer: This website is not representative of the actual Forgotten
 			Friends organization. </p>
@@ -281,6 +282,11 @@
 			<a href="#" class="fa fa-twitter"></a>
 		</footer>
 
-	</div>
+	</div> -->
+	<script>
+		$(document).ready (function(){
+			$("#footer").load("footer.html");
+		});     
+    </script>
 </body>
 </html>
