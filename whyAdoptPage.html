@@ -4,7 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Why Adopt?</title>
     <link rel="stylesheet" type="text/css" href="header.css">
-
+    <link rel="stylesheet" type="text/css" href="whyAdoptPage.css">
+    <style>
+      body {
+      margin: 0;
+      padding: 0;
+      }
+    </style>
   </head>
   <body>
     <script
@@ -16,10 +22,79 @@
     <script>
       $(document).ready (function(){
         $("#header").load("header.html");
-      });    
+      });   
+
+      $(window).on('scroll', function() {
+        console.log($(window).scrollTop())
+      }); 
   </script>
   <header id="header">
   </header>
 
+  <div class="modal active">
+    <div class="modal-content">
+      <div class="modal-tag">
+        Hi!
+      </div>
+    <div class="title"> My name is Comet and I'm a Sterling Pied Ball Snake.</div>
+    <p>
+    We really like Comet and he's found a home with us. Help Comet's friends find a loving home too.
+    </p>
+    <a href="/SNEK/adoptionPage.html">Save a Snake</a>
+    </div>
+    <div class="modal-pic">
+      <button onclick="closeModal()" class="close-button">&times;</button>
+      <img src="snake1.jpg" alt="snake1">
+    </div>  
+  </div>
+  <div class="active" id="overlay"></div>
+
+  <script>
+   function closeModal() {
+     $("#overlay").remove()
+     $(".modal").remove()
+   }
+  </script>
+
+  <div class="intro">
+    <div class="box1">
+      Meet Dave. Our Greenback Scaled python.
+    </div>
+    <div class="box2">
+      Dave's a Little Misunderstood :(
+    </div>
+  </div>
+
+  <section>
+    <div class="snake-info">
+      <div style="
+      font-size: 1.25rem;
+      padding-left: 2px;
+      color: green;
+      font-size: xx-large;
+      font-weight: 400;
+      ">
+      Some Misconceptions about our Scaly Friends:
+      </div>
+      <hr />
+      <div class="content-container">
+
+      
+      <div class="content-box">
+        Hello
+      </div>
+
+      <div class="content-box">
+        Hello
+      </div>
+
+      <div class="content-box">
+        Hello
+      </div>
+
+    </div>
+
+    </div>
+  </section>
 </body>
 </html>
