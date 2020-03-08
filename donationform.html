@@ -9,6 +9,74 @@
 	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 	  crossorigin="anonymous"> 
 	</script>
+	<style>
+		.info-box {
+			background-color: #37BD67;
+			text-align: center;
+			border-style: solid;
+			border-width: 10px;
+			border-color: #B7C324;
+		}
+
+		body {
+			background-color: black;
+		}
+	</style>
+	<script language="javascript">
+		function validate() 
+		{
+			if (document.getElementById("fname") == null || document.getElementById("fname").value == "") {
+				alert("Please enter a first name");
+				document.donation_form.fname.focus();
+				return false;
+			}
+			if (document.getElementById("lname") == null || document.getElementById("lname").value == "") {
+				alert("Please enter a last name");
+				document.donation_form.lname.focus();
+				return false;
+			}
+			if (document.getElementById("address") == null || document.getElementById("address").value == "") {
+				alert("Please enter an address");
+				document.donation_form.address.focus();
+				return false;
+			}
+			if (document.getElementById("phone") == null || document.getElementById("phone").value == "") {
+				alert("Please enter a phone number");
+				document.donation_form.phone.focus();
+				return false;
+			}
+			if (document.getElementById("money").value == "blank_money") {
+				alert("Please select a donation amount");
+				return false;
+			}
+			if (document.getElementById("card").value == "blank_card") {
+				alert("Please select a card type");
+				return false;
+			}
+			if (document.getElementById("phone") == null || document.getElementById("phone").value == "") {
+				alert("Please enter a phone number");
+				document.donation_form.phone.focus();
+				return false;
+			}
+			if (document.getElementById("creditnum") == null || document.getElementById("creditnum").value == "") {
+				alert("Please enter a credit card number");
+				document.donation_form.creditnum.focus();
+				return false;
+			}
+			if (document.getElementById("expiration") == null || document.getElementById("expiration").value == "") {
+				alert("Please enter an expiration date");
+				document.donation_form.expiration.focus();
+				return false;
+			}
+			if (document.getElementById("seccode") == null || document.getElementById("seccode").value == "") {
+				alert("Please enter a security code");
+				document.donation_form.seccode.focus();
+				return false;
+			}
+			document.write("<div>You donated " + document.getElementById("money").value + "! Thanks so much for your donation! We will be in contact shortly to confirm your donation and give you some more information about where your money will go!</div>");
+			return false;
+		}
+	</script>
 </head>
 <body>
 	<script>
@@ -18,49 +86,57 @@
 	  </script>
 	<header id="header">
 	</header>
-	<h1 style = "text-align: center;"> Donate to Forgotten Friends </h1>
-	<form class = "donation">
-		<h2> Personal Information </h2>
-		Full Name: <br>
-		<input type = "text" id = "fname">
-		<input type = "text" id = "lname"> <br> <br>
-		Address: <input type = "text" id = "address"> <br> <br>
-		Phone Number: <input type = "text" id = "firstphone"> 
-		<input type = "text" id = "secondphone">
-		<input type = "text" id = "thirdphone"> <br> <br>
-
-		<h2> Donation Information </h2>
-		How much would you like to donate? <br>
-		If you'd like to donate more than
-		$1,000, please contact us at (555) 555 - 5555. 
-		<select>
-			<option value = "blank_money">  </option>
-			<option value = "$25"> $25 </option>
-			<option value = "$50"> $50 </option>
-			<option value = "$100"> $100 </option>
-			<option value = "$250"> $250 </option>
-			<option value = "$500"> $500 </option>
-			<option value = "$1000"> $100 </option>
-		</select> <br>
-		Do you have a message you'd like to send with your donation? <br>
-		<textarea id="message" rows="4" cols="50">
-		</textarea> <br> <br>
-		<h2> Payment Information </h2>
-			Your Credit Card Company:
-			<select>
-			<option value = "blank_card"> </option>
-			<option value = "master"> MasterCard </option>
-			<option value = "visa"> VISA </option>
-			<option value = "amex"> AMEX </option>
-			<option value = "bofa"> Bank of America </option>
-			<option value = "$500"> Discover </option>
-			<option value = "$1000"> Chase </option>
-		</select>
-		Your Credit Card Number: <input type = "creditnum" id = "creditnum"> <br>
-		Expiration Date: <input type = "expiration" id = "expiration"> <br>
-		Security Code: <input type = "seccode" id = "seccode"> <br>
-		<input type="submit" value="Donate!" > 
-		</form> 
+	<h1 style = "text-align: center; color: white"> Donate to Forgotten Friends </h1>
+	<form class = "donation" name="donation_form" onsubmit="return validate()">
+		<div class="info-box">
+			<h2> Personal Information </h2>
+			Full Name: <br>
+			<input type = "text" id = "fname" name="fname">
+			<input type = "text" id = "lname" name="lname"> <br> <br>
+			Address: <input type = "text" id = "address" name="address"> <br> <br>
+			Phone Number: <input type = "text" id = "phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">  
+			<br> <small>Phone format: xxx-xxx-xxxx</small>
+			<br>
+		</div>
+		<div class="info-box">
+			<h2> Donation Information </h2>
+			How much would you like to donate? <br>
+			If you'd like to donate more than
+			$1,000, please contact us at (555) 555 - 5555. 
+			<select id="money" name="money">
+				<option value = "blank_money">  </option>
+				<option value = "$25"> $25 </option>
+				<option value = "$50"> $50 </option>
+				<option value = "$100"> $100 </option>
+				<option value = "$250"> $250 </option>
+				<option value = "$500"> $500 </option>
+				<option value = "$1000"> $100 </option>
+			</select> <br>
+			Do you have a message you'd like to send with your donation? <br>
+			<textarea id="message" rows="10" cols="50">
+			</textarea> <br> <br>
+		</div>
+		<div class="info-box">
+			<h2> Payment Information </h2>
+				Your Credit Card Company:
+				<select id="card" name="card">
+				<option value = "blank_card"> </option>
+				<option value = "master"> MasterCard </option>
+				<option value = "visa"> VISA </option>
+				<option value = "amex"> AMEX </option>
+				<option value = "bofa"> Bank of America </option>
+				<option value = "$500"> Discover </option>
+				<option value = "$1000"> Chase </option>
+			</select> <br> <br>
+			Your Credit Card Number: <input type = "creditnum" id = "creditnum" name="creditnum"> <br><br>
+			Expiration Date: <input type = "expiration" id = "expiration" name="expiration"> <br><br>
+			Security Code: <input type = "seccode" id = "seccode" name="seccode"> <br><br>
+			<input type="submit" value="Donate!"> 
+		</div>
+	</form> 
+	<!-- <script language="javascript">
+			document.write("<div>You donated " + document.getElementById("money").value + "! Thanks so much for your donation! We will be in contact shortly to confirm your donation and give you some more information about where your money will go!</div>");
+	</script> -->
 
 
 	
