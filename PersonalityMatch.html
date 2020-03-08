@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Personality Quiz </title>
+	<style>
+		.questions {
+			text-align: center;
+		}
+
+		.questions input {
+			justify-content: left;
+		}
+
+		.q_written {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h1 style = "text-align: center"> Match your personality to a snake </h1>
+	<br> <hr> <br>
+	<form>
+		<div class = "questions"> 
+			 <div class = "q_written">
+			 	Question 1: <br> You're a snake in the grass, hunting for some prey. What's for dinner? 
+			 </div>
+			<input type = "radio" name= "q1" value = "1"> A 5 course meal and some wine </button> <br>
+			<input type = "radio" name= "q1" value = "2"> "Something light, like a salad" </button> <br>
+			<input type = "radio" name= "q1" value = "3"> I’m not picky. Whatever’s in the fridge </button> <br>
+			<input type = "radio" name= "q1" value = "4"> I want pizza </button> <br> <br>
+		</div>
+		<div class = "questions"> 
+			<div class = "q_written">
+				Question 2: <br> You are building a snake-cation home. Choose your ideal summer spot: <br>
+			</div>
+			<input type = "radio" name= "q2" value = "1"> Costa Rica </button> <br>
+			<input type = "radio" name= "q2" value = "2"> Australia </button> <br>
+			<input type = "radio" name= "q2" value = "3"> Jamaica </button> <br>
+			<input type = "radio" name= "q2" value = "4"> Maldives </button> <br> <br>
+		</div>
+		<div class = "questions"> 
+			<div class = "q_written">
+				Question 3: <br> Describe your ideal three-day weekend: <br>
+			</div>
+			<input type = "radio" name= "q3" value = "1"> Cracking open cold ones with the boys </button> 
+			<br>
+			<input type = "radio" name= "q3" value = "2"> Netflix and chill </button> <br>
+			<input type = "radio" name= "q3" value = "3"> Hit the books </button> <br>
+			<input type = "radio" name= "q3" value = "4"> Full sending on back to back benders </button> <br> <br>
+		</div>
+		<div class = "questions"> 
+			<div class = "q_written">
+				Question 4: <br> What were you drinking on Friday night? <br>
+			</div>
+			<input type = "radio" name= "q4" value = "1"> Beer </button> <br>
+			<input type = "radio" name= "q4" value = "2"> Wine </button> <br>
+			<input type = "radio" name= "q4" value = "3"> Chocolate Milk </button> <br>
+			<input type = "radio" name= "q4" value = "4"> Tequila </button> <br> <br>
+		</div>
+		<div class = "questions"> 
+			<div class = "q_written">
+				Question 5: <br> What do you look for in a partner? <br>
+			</div>
+			<input type = "radio" name= "q5" value = "1"> Humor </button> <br>
+			<input type = "radio" name= "q5" value = "2"> Loyalty </button> <br>
+			<input type = "radio" name= "q5" value=  "3"> Intelligence </button> <br>
+			<input type = "radio" name= "q5" value=  "4"> Compassion </button> <br> <br>
+		</div>
+		<div class = "questions"> 
+			<div class = "q_written">
+				Question 6: <br> How would your friends describe you? <br>
+			</div>
+			<input type = "radio" name= "q6" value = "1"> Athletic </button> <br>
+			<input type = "radio" name= "q6" value = "2"> Funny </button> <br>
+			<input type = "radio" name= "q6" value = "3"> Adventurous </button> <br>
+			<input type = "radio" name= "q6" value = "4"> Shy </button> <br> <br>
+		</div> 
+		<div class = "questions"> 
+			<div class = "q_written">
+				Question 7: <br> Your dream job is:<br>
+			</div>
+			<input type = "radio" name= "q7" value = "1"> Software engineer </button> <br>
+			<input type = "radio" name= "q7" value = "2"> PETA activist </button> <br>
+			<input type = "radio" name= "q7" value = "3"> Lawyer </button> <br>
+			<input type = "radio" name= "q7" value = "4"> NBA superstar </button> <br> <br>
+		</div>
+		<div class = "questions"> 
+			<div class = "q_written">
+				Question 8:  <br> Choose a Disney TV show to watch for the rest of your life: <br>
+			</div>
+			<input type = "radio" name= "q8" value = "1"> Hannah Montana </button> <br>
+			<input type = "radio" name= "q8" value = "2"> Wizards of Waverly Place </button> <br>
+			<input type = "radio" name= "q8" value = "3"> Suite Life of Zack and Cody </button> <br>
+			<input type = "radio" name= "q8" value = "4"> Phineas and Ferb </button> <br> <br>
+		</div>
+		<div class = "questions"> 
+			<div class = "q_written">
+				Question 9: <br> Your preferred habitat is: <br>
+			</div>
+			<input type = "radio" name= "q9" value = "1"> Desert </button> <br>
+			<input type = "radio" name= "q9" value = "2"> Jungle </button> <br>
+			<input type = "radio" name= "q9" value = "3"> City </button> <br>
+			<input type = "radio" name= "q9" value = "4"> Grasslands </button> <br> <br>
+		</div>
+
+		<button type = "button" onclick="displaySnake()"> Find out which snake you are! </button>
+	</form>
+	<div id = "finalsnake" style = "text-align: center"> </div>
+
+
+	
+	<script lang="javascript">
+		var answervalues = [0,0,0,0,0,0,0,0,0];
+		function displaySnake() {
+			finalArrayvalues();
+			var average = averagevalues();
+			if (average >= 0 && average < 1.75) {
+				document.getElementById("finalsnake").innerHTML = 
+				"Congratulations, you are a garter snake! You are very friendly and easygoing and love to chill out with friends. In snake form you would make a great pet and companion, and this follows in real life as you are very good at making strong connections with others. You may not be the most adventurous person but you know what you like and you are very satisfied with it. <br>"
+			} else if (average >= 1.75 && average < 2.5) {
+				document.getElementById("finalsnake").innerHTML = 
+				"Congratulations, you are a black mamba! You have a reputation of being a bit scary and venomous, but in reality you are a sweetheart who’s just looking for some loving. Even with a scary exterior/reputation you make very strong connections and are known for being a bit of wild child, always living life to the fullest. You also have the mentality that leads to greatness and you are always striving to be the best person that you can be.";
+			} else if (average >= 2.5 && average < 3.25) {
+				document.getElementById("finalsnake").innerHTML = 
+				"Congratulations, you are a gaboon viper! You are naturally gifted in social situations and are able to fit into any situation seamlessly. Even though sometimes you may be overlooked due to your impressive social camouflaging ability, you thrive in big social occasions (but being the centre of attention is not your vibe). That being said you still love to relax and unwind with some Netflix and practice your camouflaging.";
+			} else if (average >= 3.25 && average <= 4.0) {
+				document.getElementById("finalsnake").innerHTML = 
+				"Congratulations, you are a Texas coral snake! You are a social butterfly and love to be the centre of attention. Everyone recognises you wherever you go and you are a well-known figure in your extended circles. Even though you may have lost your coat recently at a party, you know that material objects are temporary but social connections last forever, and you are on a mission to meet as many new and interesting people as you can.";
+			}
+		}
+
+
+		function finalArrayvalues() {
+			for (var i = 0; i < 9; i++) {
+				var name = "q" + (i + 1); 
+				qArray = document.getElementsByName(name);
+				for (var j = 0; j < 4; j++) {
+					if (qArray[j].checked == true) {
+						answervalues[i] = qArray[j].value;
+					}
+				}
+			}
+		}
+
+		function averagevalues() {
+			var sum = 0;
+			for (var i = 0; i < 9; i++){
+				var added = parseFloat(answervalues[i]);
+				sum += added;
+			}
+			return sum / parseFloat(9);
+		}
+	</script>
+
+	
+</body>
+</html>
