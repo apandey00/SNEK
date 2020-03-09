@@ -34,3 +34,7 @@
 	background: #55ACEE;
 	color: white;
 }
+
+body, html  {
+    	font-family: Garamond, Helvetica, Times, Arial;
+}
