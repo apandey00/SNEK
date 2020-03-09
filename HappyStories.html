@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="header.css">
+<link rel="stylesheet" type="text/css" href="footer.css">
 <title>Happy Stories</title>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+  </script>
   <style type="text/css">
     body, html  {
-      /*background-image: url("snek.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;*/
       background-color: #F3EFEA;
-      /*background-blend-mode: soft-light;*/
       height: 100%;
       margin: 0;
       font-family: Garamond, Helvetica, Times, Arial;
@@ -50,22 +52,6 @@
       color: #FFFFFF;
     }
 
-    .hero-text button {
-      border: none;
-      outline: 0;
-      display: inline-block;
-      padding: 10px 25px;
-      color: #000000;
-      background-color: #ddd;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    .hero-text button:hover {
-      background-color: #555;
-      color: white;
-    }
-
     .story {
       width: 100%;
       background-color: #96b69d;
@@ -87,12 +73,55 @@
     blockquote {
       font-size: 18px;
     }
+
+    div.gallery {
+      border: 1px solid #4c5d50;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .responsive {
+        width: 100%;
+      }
+    }
+
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   </style>
 
 </head>
 
 <body>
 
+<script type="text/javascript">
+  $(document).ready (function(){
+      $("#header").load("header.html");
+    });
+</script>
 
 <div class="hero-image">
   <div class="hero-text">
@@ -109,7 +138,7 @@
   <div class="row">
   <div class="story" style="border-bottom: none;">
     <!-- <a href="https://en.wikipedia.org/wiki/Reticulated_python"><img src="https://i.ibb.co/MP9z2K5/download.jpg" alt="Arnold and Patricia" style="padding: 10px; padding-right: 30px; border-color: #F7EAE7; max-height: 200px; width: auto; float: right;"></a> -->
-    <h2 style="text-align: left">Patricia the Python:</h1>
+    <h2 style="text-align: left">Patricia the Python:</h2>
 
       <blockquote>
         Patricia is a reticulated python who came to us after suffering a motorcycle accident in her home country of Indonesia. Despite her uncanny ability to sense movement in the ground, Patricia's normal razor sharp reflexes failed her, and she was subsequently sent to us for rehabilitation. After living in our sanctuary for nearly two years, she met 12-year-old Arnold, with whom she instantly hit it off. Arnold adopted Patricia and took her to his home in Topsfield, Massachusetts. Knowing that reticulated pythons prefer the steamy tropical climates of rainforests, Arnold built her a habitat in his mother's sauna, so that Patricia would be comfortable. Arnold's father sent us this heartwarming photograph of the two best friends spending some quality time together.
@@ -119,7 +148,7 @@
   </div>
 
   <div class="story" style="border-bottom: none; background-color: #4c5d50; color: #FFFFFF">
-    <h2 style="text-align: left">Gavin the Garter:</h1>
+    <h2 style="text-align: left">Gavin the Garter:</h2>
       <blockquote>
         Gavin is a common garter snake from Alaska who ended up at the Forgotten Friends sanctuary after being bitten by a hungry Alaskan black bear. We helped him recover from his extensive injuries over the course of a few months. Gavin is a very friendly snake and it did not take long for him to catch someone's attention. Gertrude, an 80-year-old retired journalist took Gavin home with her on the same day that she met him for the first time. Both parties were grateful to have a new friend to play games and pass time with. It seems that both Gavin and Gertrude are caring for each other in their old age.
       </blockquote>
@@ -127,17 +156,72 @@
   </div>
 
   <div class="story">
-    <h2 style="text-align: left">Brad the Boa:</h1>
+    <h2 style="text-align: left">Brad the Boa:</h2>
       <blockquote>
         Brad quickly became a staff favorite soon after being brought to the sanctuary from Colombia. He is a beautiful emerald tree boa who was beaten up by a startled family after absentmindedly wandering into their ground-level flat during a thunderstorm. Brad found his forever home with a sweet couple from North Carolina. Steven and Charlotte are empty-nesters whose three children recently all left for out-of-state colleges. They told us that Brad has proven himself the perfect antidote for the newfound loneliness they were suffering. Hopefully the children don't get too jealous of him when they visit home for the holidays!
       </blockquote>
   </div>
 </div>
 
+</br></br>
 
+<section>
+<h2>Photo Gallery</h2>
+<h3 style="text-align: center;">We love seeing pictures of you with your snake friends, so keep them coming!</h3>
 
-<!-- photo gallery at bottom -->
-<!-- submit your own story by emailing uhaefpiuwef@aonwefn.com -->
+ <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/bRJVT8c/Screen-Shot-2020-03-08-at-8-26-52-PM.png" alt="Young boy with snake" width="600" height="400">
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/ynd4QSQ/Screen-Shot-2020-03-08-at-8-27-46-PM.png" alt="Young boy with snake" width="600" height="400">
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/WymCpFb/Screen-Shot-2020-03-08-at-8-29-01-PM.png" alt="Couple with snake" width="600" height="400">
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/Y8h7hBR/Screen-Shot-2020-03-08-at-8-33-35-PM.png" alt="Young girl with snake" width="600" height="400">
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/zsQMJj8/Screen-Shot-2020-03-08-at-8-28-20-PM.png" alt="Woman with snake" width="600" height="400">
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/g9P3p9G/Screen-Shot-2020-03-08-at-8-33-01-PM.png" alt="Girl with snake" width="600" height="400">
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/JRKQBZ7/Screen-Shot-2020-03-08-at-8-34-17-PM.png" alt="Person holding snake in hands" width="600" height="400">
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/JnvdtyY/Screen-Shot-2020-03-08-at-8-34-44-PM.png" alt="Man with snake" width="600" height="400">
+    </div>
+  </div>
+
+</section>
+
+</br></br></br></br></br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br></br></br></br></br>
+&nbsp;
 
 </body>
 </html>
