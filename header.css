@@ -20,10 +20,10 @@
 
   .topnav a:hover {
   background-color: #ddd;
-  color: black;
+  color: #000000;
   }
 
   .topnav a.active {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #6B9D6D;
+    color: #FFFFFF;
   }
