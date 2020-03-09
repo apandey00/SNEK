@@ -4,15 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="header.css">
 <title>Happy Stories</title>
+<link rel="stylesheet" type="text/css" href="header.css">
   <style type="text/css">
     body, html  {
-      /*background-image: url("snek.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;*/
       background-color: #F3EFEA;
-      /*background-blend-mode: soft-light;*/
       height: 100%;
       margin: 0;
       font-family: Garamond, Helvetica, Times, Arial;
@@ -50,22 +46,6 @@
       color: #FFFFFF;
     }
 
-    .hero-text button {
-      border: none;
-      outline: 0;
-      display: inline-block;
-      padding: 10px 25px;
-      color: #000000;
-      background-color: #ddd;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    .hero-text button:hover {
-      background-color: #555;
-      color: white;
-    }
-
     .story {
       width: 100%;
       background-color: #96b69d;
@@ -86,6 +66,44 @@
 
     blockquote {
       font-size: 18px;
+    }
+
+    div.gallery {
+      border: 1px solid #4c5d50;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .responsive {
+        width: 100%;
+      }
+    }
+
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
     }
   </style>
 
@@ -134,10 +152,61 @@
   </div>
 </div>
 
+</br></br>
 
+<section>
+<h2>Photo Gallery</h2>
+<h3 style="text-align: center;">We love seeing pictures of you with your snake friends, so keep them coming!</h3>
 
-<!-- photo gallery at bottom -->
-<!-- submit your own story by emailing uhaefpiuwef@aonwefn.com -->
+ <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/bRJVT8c/Screen-Shot-2020-03-08-at-8-26-52-PM.png" alt="Young boy with snake" width="600" height="400">
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/ynd4QSQ/Screen-Shot-2020-03-08-at-8-27-46-PM.png" alt="Young boy with snake" width="600" height="400">
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/WymCpFb/Screen-Shot-2020-03-08-at-8-29-01-PM.png" alt="Couple with snake" width="600" height="400">
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/Y8h7hBR/Screen-Shot-2020-03-08-at-8-33-35-PM.png" alt="Young girl with snake" width="600" height="400">
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/zsQMJj8/Screen-Shot-2020-03-08-at-8-28-20-PM.png" alt="Woman with snake" width="600" height="400">
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/g9P3p9G/Screen-Shot-2020-03-08-at-8-33-01-PM.png" alt="Girl with snake" width="600" height="400">
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/JRKQBZ7/Screen-Shot-2020-03-08-at-8-34-17-PM.png" alt="Person holding snake in hands" width="600" height="400">
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <img src="https://i.ibb.co/JnvdtyY/Screen-Shot-2020-03-08-at-8-34-44-PM.png" alt="Man with snake" width="600" height="400">
+    </div>
+  </div>
+
+</section>
 
 </body>
 </html>
