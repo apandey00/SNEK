@@ -106,7 +106,6 @@
 	      text-align: center;
 	      font-size: 42px;
 	      font-family: Garamond, Helvetica, Times, Arial;
-	      color: #000000;
 	    }
 	    h3 {
 	      text-align: center;
@@ -118,6 +117,29 @@
 	      font-size: 18px;
 	      font-family: Garamond, Helvetica, Times, Arial;
 	    }
+
+
+    .hero-image {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("natcoralsnake.jpg");
+      height: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      background-blend-mode: color-burn;
+      -webkit-filter: grayscale(100%);
+  	  filter: grayscale(100%);
+    }
+
+    .hero-text {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #FFFFFF;
+    }
+
 	</style>
 </head>
 
@@ -130,12 +152,22 @@
     </script>
 	<header id="header"> </header>
 
+	
+
+	<div class="hero-image">
+	  <div class="hero-text">
+	    <h1 style="font-size:50px">Adopt a Snake</h1>
+	    <p style="color: #FFFFFF">Take a new friend home today</p>
+	  </div>
+	</div>
+
 	<div id="element">
 
 		<main id="center" class="column">
 			<article>
 			
-				<h1 style="text-align: center">Adopt a Snake</h1>
+
+				<!-- <h1 style="text-align: center">Adopt a Snake</h1> -->
 				<h3 style="font-size: 20px; font-weight: lighter;">Here you can find all the snakes and animals that are up for adoption right now! These animals are desperate for a home and you could be the lucky one to take them home. We have just taken in some new snakes from the Galápagos Islands, so be sure to check them out before they're gone! Below are all the listings that we currently have, and their pictures are in the sidebar on the right. If you are interested in any of them then please contact us, and we'll be happy to talk about our adoption options.</h3>
 
 				<div class="box-container">
