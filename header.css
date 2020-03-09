@@ -23,7 +23,7 @@
   color: #000000;
   }
 
-  a:active {
+  #header a:active {
     background-color: #6B9D6D;
     color: #FFFFFF;
-  }*/
+  }
