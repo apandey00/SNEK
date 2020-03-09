@@ -55,6 +55,23 @@
 			font-weight: bold;
 			font-size: 16px;
 		}
+
+		.button {
+			background-color: #35453B; 
+			border: none; 
+			color: #8EB79D; 
+			padding: 10px 20px; 
+			text-align: center; 
+			font-size: 20px; 
+			cursor: pointer; 
+			text-decoration: none; 
+			font-family: Garamond, Helvetica, Times, Arial;
+		}
+
+		.button:hover {
+			background-color: #8EB79D; 
+			color: #35453B;
+		}
 	</style>
 </head>
 <body>
@@ -154,8 +171,10 @@
 			<input type = "radio" name= "q9" value = "3"> City </button> <br>
 			<input type = "radio" name= "q9" value = "4"> Grasslands </button> <br> <br>
 		</div>
-
-		<button type = "button" onclick="displaySnake()" style="text-align: center;"> Find out which snake you are! </button>
+		<center>
+			<button class="button" type = "button" onclick="displaySnake()"> Find out which snake you are! </button>
+		</center>
+		<br><br><br>
 	</form>
 	<div id = "finalsnake" style = "text-align: center"> </div>
 	<footer id="footer">
