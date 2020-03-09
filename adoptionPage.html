@@ -7,9 +7,14 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="header.css">
 	<link rel="stylesheet" type="text/css" href="footer.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"> 
+	</script>
 
 	<style type="text/css">
-		.fa {
+		/*.fa {
   			padding: 20px;
   			font-size: 30px;
   			width: 50px;
@@ -31,7 +36,7 @@
 		.fa-twitter {
   			background: #55ACEE;
   			color: white;
-		}
+		}*/
 
 		body {
 			min-width: 630px;
@@ -69,11 +74,11 @@
 			overflow: hidden;
 		}
 		
-		* html #footer-wrapper {
+		/** html #footer-wrapper {
 			float: left;
 			position: relative;
 			width: 100%;
-		}
+		}*/
 
 		body {
 			margin: 0;
@@ -86,11 +91,11 @@
 			color: #555;
 		}
 	
-		#footer {
+		/*#footer {
 			font-size: large;
 			padding: 0.3em;
 			background: #BCCE98;
-		}
+		}*/
 		
 		#right {
 			background: #F7FDEB;
@@ -122,11 +127,6 @@
 </head>
 
 <body>
-	<script
-	  src="https://code.jquery.com/jquery-3.4.1.min.js"
-	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-	  crossorigin="anonymous"> 
-	</script>
 	<script>
 		$(document).ready (function(){
 			$("#header").load("header.html");
@@ -275,8 +275,9 @@
 		</div>
 
 	</div>
-
-	<div id="footer-wrapper">
+	<footer id="footer">
+	</footer>
+	<!-- <div id="footer-wrapper">
 		<footer id="footer">
 			<p> Disclaimer: This website is not representative of the actual Forgotten
 			Friends organization. </p>
@@ -286,6 +287,6 @@
 			<a href="#" class="fa fa-twitter"></a>
 		</footer>
 
-	</div>
+	</div> -->
 </body>
 </html>
