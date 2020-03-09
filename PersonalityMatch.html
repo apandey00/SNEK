@@ -12,6 +12,37 @@
 	  crossorigin="anonymous"> 
 	</script>
 	<style>
+		body, html  {
+	      background-color: #F3EFEA;
+	      height: 100%;
+	      margin: 0;
+	      font-family: Garamond, Helvetica, Times, Arial;
+	      background-image: url(natcobra.png);
+	      background-repeat:no-repeat;
+		  background-position: right bottom;
+		  background-size: 400px;
+		  background-blend-mode: hard-light;
+	    }
+	    @media only screen and (max-width: 600px) {
+		      body {
+		        background: none;
+		       }
+		}
+		h1 {
+			text-align: center;
+			color: #242E27;
+			font-size: 42px;
+		}
+		h2 {
+			text-align: center;
+			color: #242E27;
+			font-size: 22px;
+		}
+		hr.rounded {
+			border-top: 2px solid; 
+			border-radius: 2px; 
+			border-color: #36401d;
+		}
 		.questions {
 			text-align: center;
 		}
@@ -22,6 +53,7 @@
 
 		.q_written {
 			font-weight: bold;
+			font-size: 16px;
 		}
 	</style>
 </head>
@@ -34,8 +66,11 @@
 	  </script>
 	 <header id="header">
 	</header>
-	<h1 style = "text-align: center"> Match your personality to a snake </h1>
-	<br> <hr> <br>
+	<h1>Which snake best suits your personality?</h1>
+	<h2>Answer a few questions and our advanced algorithms will calculate which of our snakes is the perfect match for you!</h2>
+	<br> 
+	<hr class="rounded">
+	<br>
 	<form>
 		<div class = "questions"> 
 			 <div class = "q_written">
