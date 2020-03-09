@@ -12,38 +12,40 @@
 	  crossorigin="anonymous"> 
 	</script>
 	<style>
+		body, html  {
+		    background-color: #F3EFEA;
+		    height: 100%;
+		    margin: 0;      
+		    font-family: Garamond, Helvetica, Times, Arial;
+	    }
 		.info-box {
-			background-color: #37BD67;
+			background-color: #7CA089;
 			text-align: center;
 			border-style: solid;
 			border-width: 10px;
-			border-color: #B7C324;
+			border-color: #35453B;
+		}
+
+		.button {
+			background-color: #121714; 
+			border: none; 
+			color: #8EB79D; 
+			padding: 10px 20px; 
+			text-align: center; 
+			font-size: 15px; 
+			cursor: pointer; 
+			text-decoration: none; 
+			font-family: Garamond, Helvetica, Times, Arial;
+		}
+
+		.button:hover {
+			background-color: #8EB79D; 
+			color: #35453B;
 		}
 
 		body {
 			background-color: black;
 		}
-
-		body, html  {
-	      background-color: #F3EFEA;
-	      height: 100%;
-	      margin: 0;
-	      font-family: Garamond, Helvetica, Times, Arial;
-	    }
-	    h1 {
-	      text-align: center;
-	      font-size: 42px;
-	      font-family: Garamond, Helvetica, Times, Arial;
-	    }
-	    h2 {
-	      text-align: center;
-	      font-size: 32px;
-	      font-family: Garamond, Helvetica, Times, Arial;
-	    }
-	    p {
-	      font-size: 18px;
-	      font-family: Garamond, Helvetica, Times, Arial;
-	    }
 	</style>
 	<script language="javascript">
 		function validate() 
@@ -110,7 +112,7 @@
 	  </script>
 	<header id="header">
 	</header>
-	<h1 style = "text-align: center; color: white"> Donate to Forgotten Friends </h1>
+	<h1 style = "text-align: center; font-size: 42px; font-family: Garamond, Helvetica, Times, Arial; color: #FFFFFF"> Donate to Forgotten Friends </h1>
 	<form class = "donation" name="donation_form" onsubmit="return validate()">
 		<div class="info-box">
 			<h2> Personal Information </h2>
@@ -119,30 +121,32 @@
 			<input type = "text" id = "lname" name="lname"> <br> <br>
 			Address: <input type = "text" id = "address" name="address"> <br> <br>
 			Phone Number: <input type = "text" id = "phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">  
-			<br> <small>Phone format: xxx-xxx-xxxx</small>
-			<br>
+			<br> <small>(Format: xxx-xxx-xxxx)</small>
+			<br><br>
 		</div>
 		<div class="info-box">
 			<h2> Donation Information </h2>
 			How much would you like to donate? <br>
-			If you'd like to donate more than
-			$1,000, please contact us at (555) 555 - 5555. 
+			
 			<select id="money" name="money">
 				<option value = "blank_money">  </option>
-				<option value = "$25"> $25 </option>
+				<option value = "$25" selected> $25 </option>
 				<option value = "$50"> $50 </option>
 				<option value = "$100"> $100 </option>
 				<option value = "$250"> $250 </option>
 				<option value = "$500"> $500 </option>
-				<option value = "$1000"> $100 </option>
-			</select> <br>
+				<option value = "$1000"> $1000 </option>
+			</select> <br> 
+			If you'd like to donate more than
+			$1,000, please contact us at (555) 555 - 5555. 
+			<br><br>
 			Do you have a message you'd like to send with your donation? <br>
 			<textarea id="message" rows="10" cols="50">
 			</textarea> <br> <br>
 		</div>
 		<div class="info-box">
 			<h2> Payment Information </h2>
-				Your Credit Card Company:
+				Card Type:
 				<select id="card" name="card">
 				<option value = "blank_card"> </option>
 				<option value = "master"> MasterCard </option>
@@ -152,10 +156,11 @@
 				<option value = "$500"> Discover </option>
 				<option value = "$1000"> Chase </option>
 			</select> <br> <br>
-			Your Credit Card Number: <input type = "creditnum" id = "creditnum" name="creditnum"> <br><br>
-			Expiration Date: <input type = "expiration" id = "expiration" name="expiration"> <br><br>
+			Card Number: <input type = "creditnum" id = "creditnum" name="creditnum"> <br><br>
+			Expiration Date (MM/YY): <input type = "expiration" id = "expiration" name="expiration"> <br><br>
 			Security Code: <input type = "seccode" id = "seccode" name="seccode"> <br><br>
-			<input type="submit" value="Donate!"> 
+			<input type="submit" class="button" value="Donate!"> 
+			<br><br><br>
 		</div>
 	</form> 
 	<footer id="footer">
