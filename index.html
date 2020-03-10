@@ -36,8 +36,11 @@
 
     <script>
       $(document).ready (function(){
-        $("#header").load("header.html");
+        $("#header").load("header.html", function(){
+        $(".topnav a")[0].className += "active"
+        });
         $("#footer").load("footer.html");
+        
       });   
 
       $(window).on('scroll', function() {
