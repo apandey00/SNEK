@@ -40,17 +40,31 @@
         $(".topnav a")[0].className += "active"
         });
         $("#footer").load("footer.html");
+
+        var page = decodeURIComponent(document.cookie)
+        if (page !== "visited") {
+          $("#overlay").addClass("active")
+          $( ".modal" ).addClass("active")
+        }
+
+        else {
+          $(".box1").addClass("active")
+          $(".box2").addClass("active")
+        }
+
+      document.cookie = "visited";
+      console.log(document.cookie)
         
       });   
 
-      $(window).on('scroll', function() {
-        console.log($(window).scrollTop())
-      }); 
+      // $(window).on('scroll', function() {
+      //   console.log($(window).scrollTop())
+      // }); 
   </script>
   <header id="header">
   </header>
 
-  <div class="modal active">
+  <div class="modal">
     <div class="modal-content">
       <div class="modal-tag">
         Hi!
@@ -66,7 +80,7 @@
       <img src="snake1.jpg" alt="snake1">
     </div>  
   </div>
-  <div class="active" id="overlay"></div>
+  <div id="overlay"></div>
 
   <script>
    function closeModal() {
