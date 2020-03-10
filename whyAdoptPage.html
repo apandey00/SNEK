@@ -7,7 +7,105 @@
     <link rel="stylesheet" type="text/css" href="footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+    <style type="text/css">
+       * {
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+         margin: 0px;
+         padding: 0px;
+       }
+       body {
+         background-color: rgb(49, 68, 102);
+       }
+       a {
+         text-decoration: none;
+         color: white;
+       }
+       .headlineImage {
+          background-image: url('adopt_a_snake.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 100%;
+          min-height: 400px;
+       }
+       .headlineImage h1 {
+          color: white; 
+          font-size: 45px; 
+          -webkit-text-stroke-width: 2px; 
+          -webkit-text-stroke-color: black;
+          padding-top: 100px;
+          padding-bottom: auto;
+          text-align: center;
+       }
+       .headlineImage h2 {
+          font-size: 35px;  
+          text-align: center;
+          margin-top: 15px;
+          color: white; 
+          -webkit-text-stroke-width: 1px; 
+          -webkit-text-stroke-color: black;
+       }
+       #emphsizeHeadline {
+         font-weight: bold;
+         
+       }
+       .expandingHorizons {
+         background-color: rgb(49, 68, 102);
+         min-height: 100px;
+         border: rgb(92, 146, 160) 2px solid;
+         text-align: center;
+       }
+       .expandingHorizons img {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         width: 45%;
+         margin-bottom: 25px;
+         border:white 2px solid;
+       }
+       p {
+          text-align: center;
+          font-size: 22px;
+          padding: 10px;
+          color: #ffffff;
+          -webkit-text-stroke-width: 1px; 
+          -webkit-text-stroke-color: rgb(92, 146, 160);
+       }
+       .adoptionInfo {
+         background-color: slategrey;
+         border: rgb(92, 146, 160) 2px solid;
+         border-top-width: 0px;
+         text-align: center;
+         padding-bottom: 20px;
+       }
+       a {
+         color:rgb(92, 146, 160);
+         -webkit-text-stroke-width: 1px; 
+         -webkit-text-stroke-color: white;
+       }
+       a:hover {
+         color:#f0522b;
+         font-weight: bold;
+       }
+       button {
+         margin: 0 auto;
+         background-color: #f0522b;
+         font-size: 22px;
+         padding: 10px 25px;
+       }
+       .convinceMe {
+        background-color: rgb(49, 68, 102);
+       }
+       .convinceMe img {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         max-height: 275px;
+         width: 30%;
+         border: white 2px solid;
+         margin-top: 30px;
+       }
+    </style>
   </head>
   <body>
     <script
@@ -18,17 +116,31 @@
 
     <script>
       $(document).ready (function(){
-        $("#header").load("header.html", function(){
-        $(".topnav a")[1].className += "active"
-        });
+        $("#header").load("header.html");
         $("#footer").load("footer.html");
       });    
   </script>
-  <header id="header">
-  </header>
+  <header id="header"></header>
 
-  <footer id="footer">
-  </footer>
-
+  <div class="headlineImage">
+    <h1>Why <span id="emphasizeHeadline">YOU!</span> should Adopt.</h1>
+    <h2>Getting Started with Adoption...</h2>
+  </div>
+  <div class="expandingHorizons">
+    <p><br />A lot of snakes aren't venomous, and most aren't a real threat to humans or other domestic animals.<br /><br />
+       If you're looking for an interesting animal to adopt as a pet, a snake might be just right for you!<br /><br />
+       Snakes are easy to take care of, and they can recognize and interact with humans,<br /> 
+       making them perfect pets for anyone looking for an exotic pet.</p>
+       <img src="holdingSnake.jpg" />
+  </div>
+  <div class="adoptionInfo">
+    <p>For more information on how to make a pet snake your own, check out our <span id="adoption"><a href="adoptionPage.html">Adoption</a></span> page</p>
+    <button onclick="window.location.href = 'adoptionPage.html';">Save a Snake</button>
+  </div>
+  <div class="convinceMe">
+    <img src="cool_snake.jpg" />
+    <p>Need more convincing? Check out some previous <a href="HappyStories.html">Success Stories.</a></p>
+  </div>
+  <footer id="footer"></footer>
 </body>
 </html>
