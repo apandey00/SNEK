@@ -8,14 +8,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style type="text/css">
-       * {
+       /** {
          font-family: Verdana, Geneva, Tahoma, sans-serif;
          margin: 0px;
          padding: 0px;
-       }
-       body {
+       }*/
+        body, html  {
+          background-color: #F3EFEA;
+          height: 100%;
+          margin: 0;      
+          font-family: Garamond, Helvetica, Times, Arial;
+        }
+       /*body {
          background-color: rgb(49, 68, 102);
-       }
+       }*/
        .headlineImage {
           background-image: url('adopt_a_snake.jpg');
           background-size: cover;
@@ -114,7 +120,9 @@
 
     <script>
       $(document).ready (function(){
-        $("#header").load("header.html");
+        $("#header").load("header.html", function(){
+          $(".topnav a")[1].className += "active"
+        });
         $("#footer").load("footer.html");
       });    
   </script>
