@@ -18,6 +18,14 @@
     transform: translate(-50%, -50%) scale(1);
 }
 
+.modal-tag {
+    font-size: 1.4vmax;
+}
+
+.modal-content a {
+    font-size: 1.4vmax;
+}
+
 .modal-pic {
     flex: 0 0 50%;
 }
@@ -34,6 +42,7 @@
     justify-content: space-around;
     font-size: 1.25rem;
     padding: 3vmin;
+    text-align: center;
 }
 
 .modal .modal-content a {
@@ -49,6 +58,7 @@
 
 .modal .title {
     font-weight: 900;
+    font-size: 1.4vmax;
 }
 
 .close-button {
@@ -89,12 +99,14 @@
     background-size: cover;
 }
 
+
+
 .box1, .box2 {
     padding: 2vmin;
     width: 21%;
     border-style: solid;
     border-width: 1px;
-    font-size: x-large;
+    font-size: 1.5vmax;
     color: whitesmoke;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     opacity: 0;
@@ -103,7 +115,7 @@
 .box1 {
     position: absolute;
     right: 8%;
-    top: 65%;
+    top: 130%;
     
 }
 
@@ -113,10 +125,26 @@
 
 .box2 {
     position: absolute;
-    right: 25%;
-    top: 90%;
+    right: 18%;
+    top: 153%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+@media screen and (max-width: 600px) {
+    .intro {
+    height: 80vh;
+    }
+
+    .box1{
+        top: 123%;
+        font-size: 1.2vmax;
+    }
+
+    .box2{
+        top: 135%;
+        font-size: 1.2vmax;
+    }
+  }
 
 section {
     padding: 5vmin 0 0 0;
