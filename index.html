@@ -103,17 +103,15 @@
           $("#overlay").addClass("active")
           $( ".modal" ).addClass("active")
         }
-
-        else {
-          $(".box1").addClass("active")
-          $(".box2").addClass("active")
-        }
         document.cookie = "visited";
       });   
 
-      // $(window).on('scroll', function() {
-      //   console.log($(window).scrollTop())
-      // }); 
+      $(window).on('scroll', function() {
+        if($(window).scrollTop() >= 400) {
+          $(".box1").delay(100).fadeTo("slow", "1.0");
+          $(".box2").delay(1100).fadeTo("slow", "1.0");
+        }
+      }); 
   </script>
 
   <div class="modal">
@@ -139,8 +137,8 @@
    function closeModal() {
      $("#overlay").remove()
      $( ".modal" ).fadeOut( 500 );
-     $(".box1").delay(600).fadeTo("slow", "1.0");
-     $(".box2").delay(2100).fadeTo("slow", "1.0");
+    //  $(".box1").delay(600).fadeTo("slow", "1.0");
+    //  $(".box2").delay(2100).fadeTo("slow", "1.0");
    }
   </script>
     
