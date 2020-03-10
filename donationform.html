@@ -61,6 +61,18 @@
 	      	transform: translate(-50%, -50%);
 	      	color: #FFFFFF;
     	}
+
+    	.row {
+			display: flex;
+		}
+
+		.column {
+			flex: 40%; 
+			padding: 5px; 
+			font-family: Merriweather, Garamond, Georgia, Times;
+			border-color: #F3EFEA;
+			text-align: center;
+		}
 	</style>
 	<script language="javascript">
 		function validate() 
@@ -113,8 +125,14 @@
 				document.donation_form.seccode.focus();
 				return false;
 			}
-			document.write("<div>You donated " + document.getElementById("money").value + "! Thanks so much for your donation! We will be in contact shortly to confirm your donation and give you some more information about where your money will go!</div>");
+			// document.write("<div>You donated " + document.getElementById("money").value + "! Thanks so much for your donation! We will be in contact shortly to confirm your donation and give you some more information about where your money will go!</div>");
 			return false;
+		}
+
+		function displayMessage()
+		{
+			document.getElementById("messageDisplay").innerHTML = 
+			"You donated " + document.getElementById("money").value + "! Thanks so much for your donation! We will be in contact shortly to confirm your donation and give you some more information about where your money will go!"
 		}
 	</script>
 </head>
@@ -184,10 +202,14 @@
 			Card Number: <input type = "creditnum" id = "creditnum" name="creditnum"> <br><br>
 			Expiration Date (MM/YY): <input type = "expiration" id = "expiration" name="expiration"> <br><br>
 			Security Code: <input type = "seccode" id = "seccode" name="seccode"> <br><br>
-			<input type="submit" class="button" value="Donate!"> 
+			<button type="button" class="button" value="Donate!" onclick="displayMessage()"> 
 			<br><br><br>
 		</div>
 	</form> 
+	<div class="row">
+  		<div class="column" id = "messageDisplay" style="border-style: solid; margin-left: 32%; margin-right: 32%;">
+  		</div>
+	</div>
 	<footer id="footer">
 	</footer>
 
