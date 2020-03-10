@@ -1,7 +1,8 @@
   #header {
   font-size: large;
-  padding: 0.3em;
-  background: #CFDAC0;
+  border-style: solid;
+  border-width: 1px;
+  border-color: whitesmoke;
   }
 
   .topnav {
