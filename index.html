@@ -11,10 +11,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-      body {
+      body, html {
       margin: 0;
       padding: 0;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      background-color: #F3EFEA;
+      height: 100%;
+      margin: 0;
+      font-family: Garamond, Helvetica, Times, Arial;
+      /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
       }
 
       #Comet {
@@ -37,6 +41,39 @@
         font-weight: 800;
         color: black;
       }
+
+    h1 {
+      text-align: center;
+      font-size: 42px;
+      font-family: Garamond, Helvetica, Times, Arial;
+    }
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      font-family: Garamond, Helvetica, Times, Arial;
+    }
+    p {
+      font-size: 18px;
+      font-family: Garamond, Helvetica, Times, Arial;
+    }
+
+    .hero-image {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("natleafysnake.png");
+      height: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    .hero-text {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #FFFFFF;
+    }
     </style>
   </head>
   <body>
@@ -102,6 +139,17 @@
      $(".box2").delay(2100).fadeTo("slow", "1.0");
    }
   </script>
+    
+  <div class="hero-image">
+  	<div class="hero-text">
+    	<h1 style="font-size:50px">Forgotten Friends Reptile Sanctuary</h1>
+    	<p>Learn more about our adoption and rescue agency</p>
+  	</div>
+  </div>
+
+  </br>
+<h3 style="text-align: center; font-size: 22px; font-weight: lighter;">We love our scaly friends and hope to help you on your journey towards better understanding and loving these impressive reptiles. Take a look around our website and feel free to reach out to us with any questions or inquiries.</h3>
+</br>
   
   <div class="intro">
     <div class="box1">

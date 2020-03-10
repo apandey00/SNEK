@@ -61,61 +61,75 @@
 	      	transform: translate(-50%, -50%);
 	      	color: #FFFFFF;
     	}
+
+    	.row {
+			display: flex;
+		}
+
+		.column {
+			flex: 40%; 
+			padding: 5px; 
+			font-family: Merriweather, Garamond, Georgia, Times;
+			border-color: #F3EFEA;
+			text-align: center;
+		}
 	</style>
 	<script language="javascript">
-		function validate() 
+		function displayMessage() 
 		{
 			if (document.getElementById("fname") == null || document.getElementById("fname").value == "") {
 				alert("Please enter a first name");
 				document.donation_form.fname.focus();
-				return false;
+				return;
 			}
 			if (document.getElementById("lname") == null || document.getElementById("lname").value == "") {
 				alert("Please enter a last name");
 				document.donation_form.lname.focus();
-				return false;
+				return;
 			}
 			if (document.getElementById("address") == null || document.getElementById("address").value == "") {
 				alert("Please enter an address");
 				document.donation_form.address.focus();
-				return false;
+				return;
 			}
 			if (document.getElementById("phone") == null || document.getElementById("phone").value == "") {
 				alert("Please enter a phone number");
 				document.donation_form.phone.focus();
-				return false;
+				return;
 			}
 			if (document.getElementById("money").value == "blank_money") {
 				alert("Please select a donation amount");
-				return false;
+				return;
 			}
 			if (document.getElementById("card").value == "blank_card") {
 				alert("Please select a card type");
-				return false;
+				return;
 			}
 			if (document.getElementById("phone") == null || document.getElementById("phone").value == "") {
 				alert("Please enter a phone number");
 				document.donation_form.phone.focus();
-				return false;
+				return;
 			}
 			if (document.getElementById("creditnum") == null || document.getElementById("creditnum").value == "") {
 				alert("Please enter a credit card number");
 				document.donation_form.creditnum.focus();
-				return false;
+				return;
 			}
 			if (document.getElementById("expiration") == null || document.getElementById("expiration").value == "") {
 				alert("Please enter an expiration date");
 				document.donation_form.expiration.focus();
-				return false;
+				return;
 			}
 			if (document.getElementById("seccode") == null || document.getElementById("seccode").value == "") {
 				alert("Please enter a security code");
 				document.donation_form.seccode.focus();
-				return false;
+				return;
 			}
-			document.write("<div>You donated " + document.getElementById("money").value + "! Thanks so much for your donation! We will be in contact shortly to confirm your donation and give you some more information about where your money will go!</div>");
-			return false;
-		}
+			document.getElementById("messageDisplay").innerHTML = 
+			"You donated " + document.getElementById("money").value + "! Thanks so much for your donation! We will be in contact shortly to confirm your donation and give you some more information about where your money will go!"
+			document.donation_form.reset();
+			return;
+		}	
 	</script>
 </head>
 <body>
@@ -138,7 +152,7 @@
 	  </div>
 	</div>
 
-	<form class = "donation" name="donation_form" onsubmit="return validate()">
+	<form class = "donation" name="donation_form">
 		<div class="info-box">
 			<h2> Personal Information </h2>
 			Full Name:
@@ -184,10 +198,14 @@
 			Card Number: <input type = "creditnum" id = "creditnum" name="creditnum"> <br><br>
 			Expiration Date (MM/YY): <input type = "expiration" id = "expiration" name="expiration"> <br><br>
 			Security Code: <input type = "seccode" id = "seccode" name="seccode"> <br><br>
-			<input type="submit" class="button" value="Donate!"> 
+			<button type="button" class="button" value="Donate!" onclick="displayMessage()">Donate!</button>
 			<br><br><br>
 		</div>
 	</form> 
+	<div class="row">
+  		<div class="column" id = "messageDisplay" style="border-style: solid;">
+  		</div>
+	</div>
 	<footer id="footer">
 	</footer>
 
