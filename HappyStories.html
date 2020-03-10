@@ -115,7 +115,9 @@
 
 <script>
     $(document).ready (function(){
-      $("#header").load("header.html");
+      $("#header").load("header.html", function(){
+        $(".topnav a")[2].className += "active"
+        });
       $("#footer").load("footer.html");
     });     
   </script>

@@ -24,7 +24,7 @@
   color: #000000;
   }
 
-  #header .topnav a:active {
+  #header .topnav a.active {
     background-color: #6B9D6D;
     color: #FFFFFF;
   }
