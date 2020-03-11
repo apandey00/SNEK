@@ -178,7 +178,7 @@ section {
 
 .snake-info {
     box-sizing: border-box;
-    padding: 10vmin;
+    padding: 5vmin;
     width: 70%;
     background-color: whitesmoke;
 }
@@ -200,12 +200,8 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 1.1vmax;
 }
-
-/* .info-box{
-    padding: 2vmin;
-    width: 70%;
-} */
 
 a img {
     width: 70%;
